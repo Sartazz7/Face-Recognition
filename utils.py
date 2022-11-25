@@ -27,10 +27,10 @@ def plot(H, args):
 
 def train(arct, train_ds, val_ds, args):
     optimizer = torch.optim.SGD(
-      params = arct.parameters(),
-      lr = args['learning_rate'],
-      momentum = args['momentum'],
-      weight_decay = args['weight_decay']
+        params = arct.parameters(),
+        lr = args['learning_rate'],
+        momentum = args['momentum'],
+        weight_decay = args['weight_decay']
     )
     lossFunction = torch.nn.CrossEntropyLoss(reduction='sum')
     H = {
